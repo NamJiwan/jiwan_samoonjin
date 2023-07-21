@@ -1,10 +1,14 @@
-var burger = $('.menu-trigger');
+let burger = $(".menu-trigger");
+let side = $(".side");
+burger.each(function (index) {
+  let $this = $(this);
 
-burger.each(function(index){
-  var $this = $(this);
-  
-  $this.on('click', function(e){
+  $this.on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass('active-' + (index+5));
-  })
+    $(this).toggleClass("active-" + (index + 5));
+  });
+});
+
+burger.on("click", function () {
+  side.toggleClass("move");
 });
