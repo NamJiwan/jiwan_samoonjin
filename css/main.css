@@ -98,7 +98,6 @@ li {
 /* swiper */
 .swiper {
   width: 100%;
-  height: 100%;
 }
 .swiper img {
   width: 100%;
@@ -151,9 +150,9 @@ li {
 }
 .mySwiper {
   position: absolute !important;
-  top: 60%;
+  top: 5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 }
 .about_tap {
   border-top: 8px solid #c2c2c2;
@@ -466,6 +465,6 @@ h5 {
   }
 
   .mySwiper {
-    top: 130%;
+    top: 80%;
   }
 }
