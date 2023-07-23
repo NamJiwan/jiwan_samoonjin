@@ -105,8 +105,100 @@ li {
 }
 
 /* 메인 컨텐츠 시작 - 컨텐츠 탭 메뉴 */
+.about {
+  position: relative;
+}
+.mySwiper2 {
+  width: 100%;
+  /* height: 100vh; */
+}
+.mySwiper2 swiper-slide {
+  width: 100%;
+  height: 85vh;
+}
+.mySwiper2 #swiper_about_bg1 {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../images/piano.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.mySwiper2 #swiper_about_bg2 {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../images/picnic.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.mySwiper2 #swiper_about_bg3 {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../images/ferry.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.mySwiper2 #swiper_about_bg4 {
+  width: 100%;
+  height: 85vh;
+  background-image: url("../images/jumak.jpg");
+  background-size: cover;
+  background-position: center center;
+}
 
-#class_wrapper {
+.mySwiper {
+  width: 80%;
+  margin: 0 auto;
+}
+.mySwiper {
+  position: absolute !important;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about_tap {
+  border-top: 8px solid #c2c2c2;
+  padding-top: 1rem;
+  color: #c2c2c2;
+  font-size: 1.5rem;
+}
+.swiper-slide-thumb-active > h1 {
+  border-top: 8px solid #fdf2f2;
+  color: #fdf2f2;
+}
+.textBox {
+  padding-top: 13%;
+}
+.textBox h1,
+h3,
+p {
+  padding: 30px 0;
+  color: #fdf2f2;
+}
+
+.textBox h1 {
+  font-size: 3em;
+}
+
+.textBox .button1 {
+  width: 140px;
+  height: 60px;
+  background-color: #f2f2f2;
+  color: #252525;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.textBox .button1 a {
+  border: 1px solid #fdf2f2;
+  width: 20%;
+  text-align: center;
+  color: #252525;
+}
+
+/* #class_wrapper {
   position: relative;
 }
 
@@ -223,8 +315,9 @@ p {
   width: 20%;
   text-align: center;
   color: #252525;
-}
+} */
 
+/* food */
 #food {
   position: relative;
   padding-top: 150px;
@@ -323,6 +416,8 @@ h5 {
     transform: translateY(40px);
   }
 
+  /* about */
+
   #food {
     padding-bottom: 0;
   }
@@ -346,6 +441,7 @@ h5 {
     transform: translateY(0px);
   }
   #food .foodInfo > div {
+    width: 100%;
     padding: 50px 0;
   }
 
