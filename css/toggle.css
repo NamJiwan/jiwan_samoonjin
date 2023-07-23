@@ -105,6 +105,16 @@
   color: #fff;
 }
 
+.side.move .gnb {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  text-align: right;
+}
+.side.move .gnb li {
+  padding: 0 30px;
+}
+
 .side.move {
   right: 0;
   opacity: 1;
