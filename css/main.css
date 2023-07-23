@@ -1,376 +1,352 @@
-
-
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* border: 1px solid black; */
-    font-family: 'pretendard-Regular';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "pretendard-Regular";
 }
 
 h1 {
-    font-size: 3.333vw;
+  font-size: 3.333vw;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 li {
-    color:#f0f2f2;
-    list-style: none;
-
+  color: #f0f2f2;
+  list-style: none;
 }
 
 .contents {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
-
-
 
 /* 메인 컨텐츠 시작 - 메인 이미지 */
 
-
 #main .mainImg {
-    background: url("../images/main.jpg");
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
+  background: url("../images/main.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 
 /* 메인 컨텐츠 시작 - 행사 */
 #events {
-    padding-top: 180px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 240px;
+  padding-top: 180px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 240px;
 }
 
 #events .titleBox {
-    align-items: end;
-    display: flex;   
-    width: 100%;
+  align-items: end;
+  display: flex;
+  width: 100%;
 }
 
-#events .titleBox h1{
-    font-size: 3em; 
-    margin: 0 20px 20px 0;
-
+#events .titleBox h1 {
+  font-size: 3em;
+  margin: 0 20px 20px 0;
 }
 
-#events .titleBox h4{   
-    margin: 20px 0 ;
-    font-weight: lighter;
+#events .titleBox h4 {
+  margin: 20px 0;
+  font-weight: lighter;
 }
 
 #events .imgBox {
-    margin: 20px;
-    display: flex;
-    width: 100%; 
-    justify-content: space-between;
-
-    
-} 
+  margin: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
 #events .imgBox div {
-    display: flex;
-    width: 30%;
-    height: 480px; 
-    flex-direction: column;
+  display: flex;
+  width: 30%;
+  height: 480px;
+  flex-direction: column;
 }
 
 #events .imgBox div img {
-    width: 100%;
+  width: 100%;
 }
 
 #events .imgBox h4 {
-    margin: 20px 0;
+  margin: 20px 0;
 }
-
 
 /* 메인 컨텐츠 시작 - 컨텐츠 탭 메뉴 */
 
-
 #class_wrapper {
-    position:relative;
+  position: relative;
 }
 
 #class_wrapper .class_buttons {
-    transform: translateY(180px);    
+  transform: translateY(180px);
 }
 
 #contents #class_wrapper .wrapper input {
-    display: none;
+  display: none;
 }
 
-
-#contents #class_wrapper .wrapper input~div {
-    display: none;
+#contents #class_wrapper .wrapper input ~ div {
+  display: none;
 }
 
-#class_wrapper #class_tab input:nth-of-type(1):checked~div:nth-of-type(1) {
-    display: block;
+#class_wrapper #class_tab input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+  display: block;
 }
 
-#class_wrapper #class_tab input:nth-of-type(2):checked~div:nth-of-type(2) {
-    display: block;
+#class_wrapper #class_tab input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+  display: block;
 }
 
-#class_wrapper #class_tab input:nth-of-type(3):checked~div:nth-of-type(3) {
-    display: block;
+#class_wrapper #class_tab input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+  display: block;
 }
 
-#class_wrapper #class_tab input:nth-of-type(4):checked~div:nth-of-type(4) {
-    display: block;
+#class_wrapper #class_tab input:nth-of-type(4):checked ~ div:nth-of-type(4) {
+  display: block;
 }
 
-#class_tab input:nth-of-type(1):checked~section label:nth-child(1) {
-    background-color: #fdf2f2;
-    
+#class_tab input:nth-of-type(1):checked ~ section label:nth-child(1) {
+  background-color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(2):checked~section label:nth-child(2) {
-    background-color: #fdf2f2;
-    
+#class_tab input:nth-of-type(2):checked ~ section label:nth-child(2) {
+  background-color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(3):checked~section label:nth-child(3) {
-    background-color: #fdf2f2;
-    
+#class_tab input:nth-of-type(3):checked ~ section label:nth-child(3) {
+  background-color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(4):checked~section label:nth-child(4) {
-    background-color: #fdf2f2;
-    
+#class_tab input:nth-of-type(4):checked ~ section label:nth-child(4) {
+  background-color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(1):checked~section label:nth-child(1) h1{
-    
-    color: #fdf2f2;
+#class_tab input:nth-of-type(1):checked ~ section label:nth-child(1) h1 {
+  color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(2):checked~section label:nth-child(2) h1{
-    
-    color: #fdf2f2;
+#class_tab input:nth-of-type(2):checked ~ section label:nth-child(2) h1 {
+  color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(3):checked~section label:nth-child(3) h1{
-    
-    color: #fdf2f2;
+#class_tab input:nth-of-type(3):checked ~ section label:nth-child(3) h1 {
+  color: #fdf2f2;
 }
 
-#class_tab input:nth-of-type(4):checked~section label:nth-child(4) h1{
-    
-    color: #fdf2f2;
+#class_tab input:nth-of-type(4):checked ~ section label:nth-child(4) h1 {
+  color: #fdf2f2;
 }
 
 #class_wrapper label {
-    background-color: #c2c2c2;
-    width: 23%;
-    height:8px;
+  background-color: #c2c2c2;
+  width: 23%;
+  height: 8px;
 }
 
-#class_wrapper label h1{
-    transform: translateY(20px);
-    font-size: 1.4rem;
-    color: #c2c2c2;
+#class_wrapper label h1 {
+  transform: translateY(20px);
+  font-size: 1.4rem;
+  color: #c2c2c2;
 }
 
 #class_wrapper .class_buttons {
-    width: 80%;
-    height: 20px;
-    display: flex;
-    justify-content:space-between ;
+  width: 80%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.class_tab_item  .textBox{
-    position: absolute;    
-    top:36%;
-    left:14%;
+.class_tab_item .textBox {
+  position: absolute;
+  top: 36%;
+  left: 14%;
 }
 
-.class_tab_item  .textBox h1, h3, p{
-    padding: 30px 0;
-    color: #fdf2f2;
+.class_tab_item .textBox h1,
+h3,
+p {
+  padding: 30px 0;
+  color: #fdf2f2;
 }
 
 .class_tab_item h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .class_tab_item .button1 {
-    width: 140px;
-    height: 60px;
-    background-color: #f2f2f2;
-    color:#252525;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1.4em;
+  width: 140px;
+  height: 60px;
+  background-color: #f2f2f2;
+  color: #252525;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.4em;
 }
 
-.class_tab_item .button1 a{
-    border: 1px solid #fdf2f2;
-    width: 20%;
-    text-align: center;
-    color: #252525;
-    
+.class_tab_item .button1 a {
+  border: 1px solid #fdf2f2;
+  width: 20%;
+  text-align: center;
+  color: #252525;
 }
 
 #food {
-    position: relative;
-    padding-top:150px;
-    display: flex;
-    padding-bottom:150px;
-    width:100%;
-    justify-content: space-around;    
+  position: relative;
+  padding-top: 150px;
+  display: flex;
+  padding-bottom: 150px;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #food .foodInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#food .foodInfo img{
-    margin: 0 0 30px 0;
-    width: 100%;
-    
+#food .foodInfo img {
+  margin: 0 0 30px 0;
+  width: 100%;
 }
 
 #food .foodBox {
-    display: flex;
-    margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 
 #food .foodText {
-    width: 35%;
-    padding-right: 2rem;
-    
+  width: 35%;
+  padding-right: 2rem;
 }
 
 #food h1 {
-    margin: 0 0 40px 0;          
+  margin: 0 0 40px 0;
 }
 
 #food h2 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-
 #food .foodInfo div:nth-child(2) {
-    padding: 0 30px 22% 30px;
-    /* transform:translateY(-140px) ; */
+  padding: 0 30px 22% 30px;
+  /* transform:translateY(-140px) ; */
 }
 
 #food .foodInfo h2 {
-    font-size: 1.2rem;
-    margin: 0 0 10px 0 ;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
 }
 
-#food .foodInfo h2, h5 {
-    color: #ffffff;
-    z-index: 9999;
+#food .foodInfo h2,
+h5 {
+  color: #ffffff;
+  z-index: 9999;
 }
 
 .blackBox {
-    width:100%;
-    height: 50%;
-    background-color: #252525;
-    position:absolute;
-    top: 45%;
-    z-index: -99;
+  width: 100%;
+  height: 50%;
+  background-color: #252525;
+  position: absolute;
+  top: 45%;
+  z-index: -99;
 }
 
 #info {
-    position:relative;
-    
-    /* background: url("../images/pcmap.png");
+  position: relative;
+
+  /* background: url("../images/pcmap.png");
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-repeat:no-repeat; */    
+    background-repeat:no-repeat; */
 }
 
 #info h1 {
-    margin-top: 100px;
-    margin-bottom: 40px;  
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 #info .infoimgbox {
-    width: 100%;
-    
-    margin-bottom: 100px;
+  width: 100%;
+
+  margin-bottom: 100px;
 }
 
 #info img {
-    width: 100%;    
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
-@media screen and (max-width:1024px) {
-    
-    #events {
-        padding-bottom: 0px;
-    }
+@media screen and (max-width: 1024px) {
+  #events {
+    padding-bottom: 0px;
+  }
 
-    #class_wrapper .class_buttons {
-        transform: translateY(40px);    
-    }
+  #class_wrapper .class_buttons {
+    transform: translateY(40px);
+  }
 
-    #food {
-        padding-bottom: 0;
-    }
+  #food {
+    padding-bottom: 0;
+  }
 
-    #food .foodBox{
-        flex-direction: column;
-        
-    }
+  #food .foodBox {
+    flex-direction: column;
+  }
 
-    #food .foodText {
-        width: 100%;
-        margin-right: 80px ;
-    }
+  #food .foodText {
+    width: 100%;
+    margin-right: 80px;
+  }
 
-    #food .foodInfo {
-        flex-direction: column;
-        align-items: start;
-    }
+  #food .foodInfo {
+    flex-direction: column;
+    align-items: start;
+  }
 
-    #food .foodInfo div:nth-child(2) {
-        padding: 0 0px;
-        transform:translateY(0px) ;
-    }
+  #food .foodInfo div:nth-child(2) {
+    padding: 0 0px;
+    transform: translateY(0px);
+  }
+  #food .foodInfo > div {
+    padding: 50px 0;
+  }
 
-    #food .foodInfo h2, h5 {
-        color: #252525;
-        z-index: 9999;
-    }
-    
+  #food .foodInfo h2,
+  h5 {
+    color: #252525;
+    z-index: 9999;
+  }
 
-    .blackBox {
-        display: none;
-    }
+  .blackBox {
+    display: none;
+  }
 
-    #info .infoimgbox {        
-        margin-bottom: 100px;
-    }
-
-    
-    
+  #info .infoimgbox {
+    margin-bottom: 100px;
+  }
 }
-
