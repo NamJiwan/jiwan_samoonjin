@@ -61,7 +61,7 @@ li {
 }
 
 #events .titleBox h1 {
-  font-size: 3em;
+  font-size: 3.333vw;
   margin: 0 20px 20px 0;
 }
 
@@ -176,7 +176,7 @@ p {
 }
 
 .textBox h1 {
-  font-size: 3em;
+  font-size: 3.333vw;
 }
 
 .textBox .button1 {
@@ -457,5 +457,15 @@ h5 {
 
   #info .infoimgbox {
     margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #events .titleBox h1 {
+    margin: 20px 20px 20px 0;
+  }
+
+  .mySwiper {
+    top: 130%;
   }
 }
