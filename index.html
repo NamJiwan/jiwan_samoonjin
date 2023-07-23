@@ -18,6 +18,12 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
   </head>
 
@@ -89,35 +95,52 @@
         </div>
       </div>
     </section>
+
+    <!-- events -->
     <section id="events" class="contents">
       <div class="titleBox">
         <h1 id="events2">행사</h1>
         <h4>사문진에서 진행되는 다양한 행사를 소개드립니다.</h4>
       </div>
-      <div class="imgBox">
-        <div>
-          <img src="./images/마스크 그룹 1.jpg" />
-          <h4>
-            1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는 <br />
-            역사깊은 큰 이벤트이다.
-          </h4>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./images/마스크 그룹 1.jpg" />
+            <h4>
+              1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는
+              <br />
+              역사깊은 큰 이벤트이다.
+            </h4>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/마스크 그룹 2.jpg" />
+            <h4>
+              1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는
+              <br />
+              역사깊은 큰 이벤트이다.
+            </h4>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/마스크 그룹 3.jpg" />
+            <h4>
+              1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는
+              <br />
+              역사깊은 큰 이벤트이다.
+            </h4>
+          </div>
         </div>
-        <div>
-          <img src="./images/마스크 그룹 2.jpg" />
-          <h4>
-            1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는 <br />
-            역사깊은 큰 이벤트이다.
-          </h4>
-        </div>
-        <div>
-          <img src="./images/마스크 그룹 3.jpg" />
-          <h4>
-            1년에 한번 100명의 피아노 연주자가 100대의 피아노를 연주하는 <br />
-            역사깊은 큰 이벤트이다.
-          </h4>
-        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
+
+    <!-- about -->
     <section id="contents">
       <div id="class_wrapper">
         <div class="wrapper" id="class_tab">
@@ -222,6 +245,8 @@
         </div>
       </div>
     </section>
+
+    <!-- food -->
     <section id="food">
       <div class="foodBox contents">
         <div class="foodText">
@@ -311,7 +336,8 @@
       </div>
     </footer>
     <script src="./js/toggle.js"></script>
-
     <script src="./js/pallox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/swiper_samoons.js"></script>
   </body>
 </html>
