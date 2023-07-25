@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/heaader.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/toggle.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
 
     <!-- 폰트어썸 CDN -->
     <link
@@ -37,7 +37,7 @@
           <ul class="gnb">
             <li><a href="./login.html">Login</a></li>
 
-            <li>Sign up</li>
+            <li><a href="./signup.html">Sign up</a></li>
           </ul>
           <ul class="lnb">
             <li><a href="#">소개</a></li>
@@ -78,21 +78,29 @@
     <div id="background">
         <section id="login" class="contents">
             <div>
-                <h1>로그인</h1>
+                <h1>회원가입</h1>
             </div>
             <form action="">
                 <fieldset>
                     <div class="bigBox">
                         <div class="inputBox">
-                            <input class="textBox" type="text" placeholder="아이디">
-                            <input class="textBox" type="text" placeholder="비밀번호">
+                            <input class="textBox" type="text" placeholder="아이디 (6~20자)">
+                            <div class="idcheck">아이디중복확인</div>
+                            <input class="textBox" type="text" placeholder="비밀번호 (문자, 숫자, 특수문자를 포함한 8~20자)">
+                            <input class="textBox" type="text" placeholder="비밀번호 확인">
+                            <input class="textBox" type="text" placeholder="이름">
+                            <input class="textBox" type="text" placeholder="연락처">
                         </div>
-                        <input type="submit">로그인</input>
-                    </div>
-                    <label for="remember-check">
+                        <label for="remember-check">
                         <input type="checkbox" id="remember-check">
-                        아이디 저장
+                        개인정보 수집 및 정보이용에 동의합니다
                     </label>
+                        <div class="buttonbox">
+                          <button class="blackbutton">메인으로</button>
+                          <button>가입하기</button>
+                        </div>
+                    </div>
+                    
                     <div class="kakao"></div>
                     <div class="naver"></div>
                 </fieldset>

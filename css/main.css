@@ -35,7 +35,7 @@ li {
 /* 메인 컨텐츠 시작 - 메인 이미지 */
 
 #main .mainImg {
-  background: url("../images/main.jpg");
+  background: url("../images/main/main.jpg");
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -118,28 +118,28 @@ li {
 .mySwiper2 #swiper_about_bg1 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/piano.jpg");
+  background-image: url("../images/introduce/piano.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
 }
 .mySwiper2 #swiper_about_bg2 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/picnic.jpg");
+  background-image: url("../images/introduce/picnic.jpg");
   background-size: cover;
   background-position: center center;
 }
 .mySwiper2 #swiper_about_bg3 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/ferry.jpg");
+  background-image: url("../images/introduce/ferry.jpg");
   background-size: cover;
   background-position: center center;
 }
 .mySwiper2 #swiper_about_bg4 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/jumak.jpg");
+  background-image: url("../images/introduce/jumak.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -337,6 +337,13 @@ p {
   width: 100%;
 }
 
+#food .foodInfo img:first-child{
+  display: block;
+}
+#food .foodInfo img:last-child{
+  display: none;
+}
+
 #food .foodBox {
   display: flex;
   margin: 0 auto;
@@ -407,6 +414,11 @@ h5 {
 }
 
 @media screen and (max-width: 1024px) {
+.contents {
+  width: 90%;
+  margin: 0 auto;
+}
+
   #events {
     padding: 100px 0;
   }
@@ -416,7 +428,11 @@ h5 {
   }
 
   /* about */
+  .mySwiper {
+  width: 90%;
+}
 
+  /* food */
   #food {
     padding-bottom: 0;
   }
@@ -427,13 +443,28 @@ h5 {
 
   #food .foodText {
     width: 100%;
-    margin-right: 80px;
+    display: flex;
+    align-items: end;
   }
+  #food .foodText h1 {
+  margin: 0 20px 0 0;
+}
 
   #food .foodInfo {
     flex-direction: column;
     align-items: start;
   }
+  #food .foodInfo img {
+  margin: 0 0 20px 0;
+  
+}
+
+  #food .foodInfo img:first-child{
+  display: none;
+}
+#food .foodInfo img:last-child{
+  display: block;
+}
 
   #food .foodInfo div:nth-child(2) {
     padding: 0 0px;
