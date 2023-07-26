@@ -29,12 +29,17 @@
   }
   
   .contents {
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
   }
   
+  form{
+    width: 100%;
+  }
   fieldset {
     border: none;
+    width: 100%;
+    min-inline-size: 0;
   }
   
   input {
@@ -130,4 +135,10 @@ button {
   border-radius: 10px;
   margin: 20px;
   
+}
+
+@media screen and (max-width:1024px) {
+  .contents{
+    width: 90%;
+  }
 }
