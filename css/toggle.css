@@ -115,6 +115,10 @@
   padding: 0 30px;
 }
 
+.side.move .gnb li a{
+  color: #fff;
+}
+
 .side.move {
   right: 0;
   opacity: 1;

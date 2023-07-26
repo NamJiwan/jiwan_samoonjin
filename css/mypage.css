@@ -27,7 +27,7 @@ li {
 }
 
 .contents {
-  max-width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -89,6 +89,7 @@ button {
 
 .buttonbox {
   display: flex;
+  justify-content: center;
 }
 
 
@@ -149,8 +150,7 @@ p {
 
 
 
-.bigBox div{
-  
+.bigBox div{  
   text-align: left;
 }
 
