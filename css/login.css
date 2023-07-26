@@ -122,3 +122,9 @@ button {
   width: 14px;
   height: 14px;
 }
+
+@media screen and (max-width:1024px) {
+    #login {
+      width:80%;
+    }
+}
