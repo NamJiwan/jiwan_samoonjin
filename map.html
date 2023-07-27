@@ -86,9 +86,7 @@
         <p>대구의 대표 관광지 사문진을 편히 찾아오실 수 있도록 안내 드립니다.</p>
         <p>대구광역시 달성군 화원읍 성산리 318-1</p>
     </div>
-    <div class="map">
-
-    </div>
+    <div class="map" id="map"></div>
     <div class="textbox2">
         <h4><i class="fa-solid fa-bus"></i>PUBLIC</h4>
         <p>지하철1호선 화원역 (1번출구) → 버스환승(650번) → 삼주아파트 → 화원유원지(사문진 주막촌)입구 하차</p>
@@ -118,6 +116,7 @@
           <span>영상정보처리기기운영방침</span><span>|</span>
           <span>채용안내</span>
         </div>
+
         <div>
           <h4>(711839)대구광역시 달성군 화원읍 성산리 318-1</h4>
         </div>
@@ -130,7 +129,40 @@
       </div>
     </div>
   </footer>
-
+    <!-- 토글 스크립트 -->
     <script src="./js/toggle.js"></script>
+    
+    <!-- 지도api -->
+    <script type="text/javaScript">
+      function initMap() {
+           const map = new google.maps.Map(document.getElementById("map"), {
+               zoom: 16,
+               center: { lat: 35.81097514445517, lng:  128.47713134067183 }, // 지도의 중심 좌표
+           });
+
+           // 마커 정보
+           var locations = [
+                  {testId: 'location01', lat: 35.81097514445517, lng:  128.47713134067183},
+
+           ];
+
+           // 마커 생성
+           for (var i = 0; i < locations.length; i++) {
+               var mapIcon = new google.maps.MarkerImage('images/map_google_marker.png'); // 이미지 파일 경로를 설정해주면 다른 마커아이콘을 쓸 수 있음!
+               var marker = new google.maps.Marker({
+                     map: map,
+                     position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                     icon: mapIcon
+                 });
+               google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                   return function() {
+                       // 마커 클릭시 실행할 이벤트를 설정해줄 수 있다
+                      alert(locations[i].testId);
+                   }
+               })(marker, i));
+           }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeMQw608rSIq4KlUbj9R8E9NHO7reFMTo&callback=initMap&libraries=&v=weekly" async></script>
   </body>
 </html>
