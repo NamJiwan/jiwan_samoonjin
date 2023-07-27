@@ -134,7 +134,7 @@ button {
   height: 40px;
   border-radius: 10px;
   margin: 20px;
-  
+  cursor: pointer;
 }
 
 @media screen and (max-width:1024px) {
