@@ -133,11 +133,129 @@ h1 {
 }
 
 /* 예약 */
-article > div > h1 {
+.re_h1 {
+  text-align: center;
   margin: 50px 0;
 }
 .brownline {
   border-bottom: 2px solid #a68051;
   margin: 0 auto;
   width: 100%;
+}
+.class_tab_item > h2 {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*  */
+.sec3 {
+  margin-top: 50px;
+  padding: 100px;
+}
+.booking_area {
+  /*.check_availability 클릭 시 오픈*/
+  display: block;
+  border: 1px solid #937549;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: initial;
+}
+.booking {
+  padding: 50px;
+  box-sizing: border-box;
+  border: 1px solid #937549;
+  background-color: #fff;
+}
+.booking_center_area {
+  width: 700px;
+  margin: 50px auto 0;
+}
+.booking_center_area h2 {
+  font-size: 18px;
+  color: #937549;
+}
+
+/* 객실/성인/소아 */
+.guest {
+  padding: 20px 10px 30px;
+  box-sizing: border-box;
+  border-top: 1px solid #937549;
+  border-bottom: 1px solid #937549;
+  width: 100%;
+  height: 100%;
+}
+.guest div {
+  margin: 0;
+  display: inline-block;
+  width: 33.333%;
+  height: 150px;
+  padding: 20px;
+  text-align: center;
+}
+.guest div h3 {
+  font-size: 22px;
+}
+.guest div button {
+  background: transparent;
+  border: 2px solid #937549;
+  padding: 0 4px;
+  font-size: 16px;
+  color: #937549;
+  vertical-align: sub;
+  cursor: pointer;
+}
+.guest div span {
+  padding: 20px;
+  font-size: 40px;
+  vertical-align: middle;
+}
+.child {
+  position: relative;
+}
+.child h3 {
+  margin-left: 10px;
+}
+.child ion-icon {
+  cursor: pointer;
+}
+.child img {
+  max-width: 200px;
+  position: absolute;
+  top: -62px;
+  right: -112px;
+  display: none;
+}
+
+/* 체크 버튼 */
+.check {
+  border-top: 1px solid #937549;
+  margin-top: 5px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.check button {
+  border: 2px solid #937549;
+  background: #f4f2f0;
+  padding: 20px 50px;
+  box-shadow: 2px 3px 8px #888;
+  margin: 100px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.check button:hover {
+  background-color: #937549;
+}
+.check button a {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #937549;
+  font-weight: 400;
+}
+.check button:hover a {
+  color: #fff;
 }

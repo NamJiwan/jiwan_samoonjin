@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/toggle.css" />
     <link rel="stylesheet" href="./css/reserve.css" />
+    <!-- 캘린더 CSS -->
+    <link rel="stylesheet" href="css/pignose.calendar.min.css" />
+    <link rel="stylesheet" href="css/style_calender_box.css" />
     <!-- 폰트어썸 CDN -->
     <link
       rel="stylesheet"
@@ -16,8 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <!-- 캘린더 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/pignose.calendar.full.min.js"></script>
   </head>
 
   <body>
@@ -100,17 +104,27 @@
             <!-- 예약 -->
             <article>
               <div class="brownline">
-                <h1>예약하기</h1>
+                <h1 class="re_h1">예약하기</h1>
               </div>
             </article>
+            <h2>FERRY</h2>
+            <div class="multi-select-calendar">
+              <div class="calendar"></div>
+            </div>
+            <div class="box">선택하신 날짜 : 2022-06-13 ~ 2022-06-16</div>
           </div>
           <div class="class_tab_item">
             <!-- 예약 -->
-            <section>
+            <articles>
               <div class="brownline">
-                <h1>예약하기</h1>
+                <h1 class="re_h1">예약하기</h1>
               </div>
-            </section>
+            </articles>
+            <h2>PICNIC</h2>
+            <div class="multi-select-calendar">
+              <div class="calendar"></div>
+            </div>
+            <div class="box">선택하신 날짜 : 2022-06-13 ~ 2022-06-16</div>
           </div>
         </div>
       </div>
@@ -140,5 +154,6 @@
     </footer>
 
     <script src="./js/toggle.js"></script>
+    <script src="js/calender.js"></script>
   </body>
 </html>
