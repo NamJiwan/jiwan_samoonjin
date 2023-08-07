@@ -26,6 +26,9 @@ li {
   color: #f0f2f2;
   list-style: none;
 }
+button {
+  border-width: 0;
+}
 
 .contents {
   width: 80%;
@@ -227,6 +230,23 @@ h1 {
   right: -112px;
   display: none;
 }
+.reserve-selet {
+  display: block;
+  border-top: 1px solid #a68051;
+  border-bottom: 1px solid #a68051;
+  padding: 50px 0;
+  text-align: center;
+}
+.reserve-selet.active {
+  display: block;
+}
+.reserve-selet h2 {
+  padding: 20px 0 50px 0;
+}
+.time-selet {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* 체크 버튼 */
 .check {
@@ -247,6 +267,11 @@ h1 {
   transform: translateX(-50%);
   cursor: pointer;
 }
+.reserve-submit {
+  cursor: pointer;
+  width: 360px !important;
+}
+
 .check button:hover {
   background-color: #937549;
 }
