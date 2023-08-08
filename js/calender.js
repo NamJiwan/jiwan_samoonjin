@@ -30,10 +30,15 @@ $(function () {
     $box.text(text);
   }
   //시간선택시 클래스 추가
-  $(".select-time").on("click", function(e){
+  $(".select-time").on("click", function (e) {
     $(e.target).addClass("select");
     $(e.target).siblings().removeClass("select");
-  })
+  });
+
+  //장소 선택시 클래스 추가
+  $(".select-reserve-box div span").on("click", function (e) {
+    $(e.target).toggleClass("ck_active");
+  });
 
   // 예약 버튼에 Click Listener 대기시킴 ,kangelee
   $(".reserve-submit").on("click", function () {

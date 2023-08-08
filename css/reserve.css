@@ -248,27 +248,47 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.select-time{
+.select-time {
   border-radius: 5px;
   width: 10%;
-  padding: 5px 0 ;
+  padding: 5px 0;
   transition: 0.3s;
 }
-.select-time.select{
+.select-time.select {
   background-color: #a68051;
   color: white;
 }
-.select-reserve-box{
+.select-reserve-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.select-reserve-box >div{
+.select-reserve-box > div {
   width: 100%;
+  display: flex;
+  justify-self: start;
 }
-.select-reserve-box div span{
+.select-reserve-box div span {
   display: inline-block;
   width: 9% !important;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.select-reserve-box div span.ck_active {
+  color: #f4f2f0;
+}
+.select-reserve-box div span.ck_active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 36%;
+  width: 30%;
+  height: 100%;
+  background-color: #a68051;
+  border-radius: 50%;
+  z-index: -5;
 }
 
 /* 체크 버튼 */
@@ -292,10 +312,10 @@ h1 {
 }
 .reserve-submit {
   cursor: pointer;
-  width:30% !important;
+  width: 30% !important;
 }
 
-.box{
+.box {
   display: none !important;
 }
 .check button:hover {
