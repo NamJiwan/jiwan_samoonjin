@@ -230,22 +230,33 @@ h1 {
   right: -112px;
   display: none;
 }
-.reserve-selet {
+.reserve-select {
   display: block;
   border-top: 1px solid #a68051;
   border-bottom: 1px solid #a68051;
   padding: 50px 0;
   text-align: center;
 }
-.reserve-selet.active {
+.reserve-select.active {
   display: block;
 }
-.reserve-selet h2 {
+.reserve-select h2 {
   padding: 20px 0 50px 0;
 }
-.time-selet {
+.time-select {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.select-time{
+  border-radius: 5px;
+  width: 10%;
+  padding: 5px 0 ;
+  transition: 0.3s;
+}
+.select-time.select{
+  background-color: #a68051;
+  color: white;
 }
 
 /* 체크 버튼 */
@@ -272,6 +283,9 @@ h1 {
   width: 360px !important;
 }
 
+.box{
+  display: none !important;
+}
 .check button:hover {
   background-color: #937549;
 }

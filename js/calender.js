@@ -13,14 +13,14 @@ $(function () {
 
     if (date[0] !== null) {
       text += date[0].format("YYYY-MM-DD");
-      $(".reserve-selet").slideDown(300);
+      $(".reserve-select").slideDown(500);
     }
 
     if (date[0] !== null && date[1] !== null) {
       text += " ~ ";
     } else if (date[0] === null && date[1] == null) {
       text += "nothing";
-      $(".reserve-selet").slideUp(300);
+      $(".reserve-select").slideUp(500);
     }
 
     if (date[1] !== null) {
@@ -29,6 +29,11 @@ $(function () {
 
     $box.text(text);
   }
+  //시간선택시 클래스 추가
+  $(".select-time").on("click", function(e){
+    $(e.target).addClass("select");
+    $(e.target).siblings().removeClass("select");
+  })
 
   // 예약 버튼에 Click Listener 대기시킴 ,kangelee
   $(".reserve-submit").on("click", function () {
