@@ -156,6 +156,7 @@ h1 {
 
 .brownline h2 {
   margin-bottom: 80px;
+  padding-top: 40px;
 }
 
 #gallery {
@@ -202,6 +203,7 @@ button {
   border-radius: 15px;
   outline: none;
   border-width: 0;
+  cursor: pointer;
 }
 
 .box2 {
@@ -245,9 +247,45 @@ button {
   }
 }
 
+@media screen and (max-width: 765px) {
+  #class_wrapper .class_buttons {
+    width: 50%;
+  }
+  .class_buttons::after {
+    content: "";
+    background-color: #252525;
+    width: 375%;
+    height: 100%;
+    position: absolute;
+    left: -200%;
+    z-index: -9;
+  }
+}
+
 @media screen and (max-width: 625px) {
+  #class_wrapper .class_buttons {
+    width: 50%;
+  }
+  .class_buttons::after {
+    content: "";
+    background-color: #252525;
+    width: 275%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: -9;
+  }
+  #class_wrapper label h1 {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    color: #c2c2c2;
+  }
   .gallery-photo {
     width: 42%;
     height: 200px;
+  }
+  .brownline h2 {
+    margin-bottom: 40px;
+    padding-top: 20px;
   }
 }
