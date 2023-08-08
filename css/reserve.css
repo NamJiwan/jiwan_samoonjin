@@ -258,6 +258,18 @@ h1 {
   background-color: #a68051;
   color: white;
 }
+.select-reserve-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.select-reserve-box >div{
+  width: 100%;
+}
+.select-reserve-box div span{
+  display: inline-block;
+  width: 9% !important;
+}
 
 /* 체크 버튼 */
 .check {
@@ -280,7 +292,7 @@ h1 {
 }
 .reserve-submit {
   cursor: pointer;
-  width: 360px !important;
+  width:30% !important;
 }
 
 .box{
