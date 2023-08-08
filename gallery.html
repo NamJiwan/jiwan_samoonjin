@@ -117,6 +117,7 @@
             <div class="brownline">
               <h2>VR</h2>
             </div>
+            <div class="panaloma"></div>
           </div>
         </div>
       </div>
@@ -147,5 +148,21 @@
 
     <script src="/js/toggle.js"></script>
     <script src="/js/gallery.js"></script>
+
+    <script src="js/three.min.js" defer></script>
+    <script src="js/panolens.min.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", (e) => {
+        const panoImage = document.querySelector(".panaloma");
+        const mainImage = "images/test1.jpeg";
+
+        const panorama = new PANOLENS.ImagePanorama(mainImage);
+        const viewer = new PANOLENS.Viewer({
+          container: panoImage,
+          autoRotate: true,
+        });
+        viewer.add(panorama);
+      });
+    </script>
   </body>
 </html>
