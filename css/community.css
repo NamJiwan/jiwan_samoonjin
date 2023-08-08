@@ -107,6 +107,7 @@ table tbody tr {
 
 table tr td{
     padding: 15px 0;
+  
 }
 
 
@@ -150,4 +151,22 @@ tbody tr td:nth-child(2) {
     background-color: #827367;
     color:#252525;
     
+}
+
+@media screen and (max-width:1024px) {
+  
+  table tr td {
+    font-size: 12px;
+  }
+
+  table tr th:nth-child(2) {
+    width:40%;   
+    text-align: start;
+    padding-left: 10%;
+  }
+
+  .buttonbox button img{
+    width: 80px;
+  }
+  
 }

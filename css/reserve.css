@@ -259,11 +259,15 @@ h1 {
   background-color: #a68051;
   color: white;
 }
+.reserve-select img{
+  width: 50%;
+}
 .select-reserve-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .select-reserve-box > div {
   width: 100%;
   display: flex;
@@ -341,6 +345,12 @@ h1 {
 }
 
 @media screen and (max-width: 625px) {
+  #class_wrapper label h1 {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    color: #c2c2c2;
+  }
+
   .select-reserve-box div span.ck_active::after {
     left: 10%;
     width: 80%;

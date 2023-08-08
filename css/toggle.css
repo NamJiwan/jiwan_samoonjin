@@ -37,6 +37,7 @@
 
 .menu-trigger span:nth-of-type(2) {
   top: 42%;
+  width: 40%;
 }
 
 .menu-trigger span:nth-of-type(3) {

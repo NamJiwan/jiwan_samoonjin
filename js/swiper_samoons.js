@@ -54,7 +54,7 @@ var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
   thumbs: {
     swiper: swiper3,
