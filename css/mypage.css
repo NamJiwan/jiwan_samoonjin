@@ -45,7 +45,7 @@ button {
 /* 섹션 로그인 */
 
 #background {
-  background-image: url("../images/login/loginbackground.jpg");
+  background-image: url("/images/login/loginbackground.jpg");
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -91,8 +91,6 @@ button {
   display: flex;
   justify-content: center;
 }
-
-
 
 #login .inputBox {
   width: 100%;
@@ -145,12 +143,10 @@ h2 {
 }
 
 p {
-  padding: 5px 0 5px 4%; 
+  padding: 5px 0 5px 4%;
 }
 
-
-
-.bigBox div{  
+.bigBox div {
   text-align: left;
 }
 
@@ -159,23 +155,21 @@ p {
   cursor: pointer;
 }
 
-table, th, td {
-  
+table,
+th,
+td {
   text-align: center;
 }
-
-
 
 table {
   padding-top: 20px;
   width: 100%;
-  height:200px;
+  height: 200px;
 }
 
-@media screen and (max-width:1024px) {
-  
+@media screen and (max-width: 1024px) {
   #login {
-    width:80%;
+    width: 80%;
     padding-top: 120px;
   }
 

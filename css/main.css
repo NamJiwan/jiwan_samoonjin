@@ -35,7 +35,11 @@ li {
 /* 메인 컨텐츠 시작 - 메인 이미지 */
 
 #main .mainImg {
+<<<<<<< Updated upstream
   background: url("../images/main/main.png");
+=======
+  background: url("/images/main/main.jpg");
+>>>>>>> Stashed changes
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -119,28 +123,28 @@ li {
 .mySwiper2 #swiper_about_bg1 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/introduce/piano.jpg");
+  background-image: url("/images/introduce/piano.jpg");
   background-size: cover;
   background-position: center center;
 }
 .mySwiper2 #swiper_about_bg2 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/introduce/picnic.jpg");
+  background-image: url("/images/introduce/picnic.jpg");
   background-size: cover;
   background-position: center center;
 }
 .mySwiper2 #swiper_about_bg3 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/introduce/ferry.jpg");
+  background-image: url("/images/introduce/ferry.jpg");
   background-size: cover;
   background-position: center center;
 }
 .mySwiper2 #swiper_about_bg4 {
   width: 100%;
   height: 85vh;
-  background-image: url("../images/introduce/jumak.jpg");
+  background-image: url("/images/introduce/jumak.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -338,10 +342,10 @@ p {
   width: 100%;
 }
 
-#food .foodInfo img:first-child{
+#food .foodInfo img:first-child {
   display: block;
 }
-#food .foodInfo img:last-child{
+#food .foodInfo img:last-child {
   display: none;
 }
 
@@ -391,7 +395,7 @@ h5 {
 #info {
   position: relative;
 
-  /* background: url("../images/pcmap.png");
+  /* background: url("/images/pcmap.png");
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -415,10 +419,10 @@ h5 {
 }
 
 @media screen and (max-width: 1024px) {
-.contents {
-  width: 90%;
-  margin: 0 auto;
-}
+  .contents {
+    width: 90%;
+    margin: 0 auto;
+  }
 
   #events {
     padding: 100px 0;
@@ -430,8 +434,8 @@ h5 {
 
   /* about */
   .mySwiper {
-  width: 90%;
-}
+    width: 90%;
+  }
 
   /* food */
   #food {
@@ -448,24 +452,23 @@ h5 {
     align-items: end;
   }
   #food .foodText h1 {
-  margin: 0 20px 0 0;
-}
+    margin: 0 20px 0 0;
+  }
 
   #food .foodInfo {
     flex-direction: column;
     align-items: start;
   }
   #food .foodInfo img {
-  margin: 0 0 20px 0;
-  
-}
+    margin: 0 0 20px 0;
+  }
 
-  #food .foodInfo img:first-child{
-  display: none;
-}
-#food .foodInfo img:last-child{
-  display: block;
-}
+  #food .foodInfo img:first-child {
+    display: none;
+  }
+  #food .foodInfo img:last-child {
+    display: block;
+  }
 
   #food .foodInfo div:nth-child(2) {
     padding: 0 0px;
