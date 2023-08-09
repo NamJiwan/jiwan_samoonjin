@@ -20,8 +20,9 @@ h1 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #f0f2f2;
 }
+
 li {
   color: #f0f2f2;
   list-style: none;
@@ -198,7 +199,7 @@ p {
 }
 
 .nomargin {
-  margin: 10px;
+  
   width: 40%;
   height: 10%;
 }
