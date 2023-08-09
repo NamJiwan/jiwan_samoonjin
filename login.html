@@ -14,6 +14,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 카카오로그인 -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <!-- 네이버로그인 -->
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"
+    charset="utf-8"></script>
+  <!-- 구글로그인 -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta name="google-signin-client_id"
+    content="143477412918-9eh29ql0r1ejlgp7gueks5i3tfl7lv27.apps.googleusercontent.com">
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
@@ -30,7 +39,7 @@
         </div>
         <div class="nb">
           <ul class="gnb" th:if="${isLoggedIn}">
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="javascript:kakaoLogout();">Logout</a></li>
             <li><a href="/mypage">My page</a></li>
           </ul>
           <ul class="gnb" th:unless="${isLoggedIn}">
@@ -94,10 +103,17 @@
           <div class="kakao">
             <a id="kakao-login-btn" href="javascript:kakaoLogin();">
               <img src="//k.kakaocdn.net/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg" width="83%" height="50px" />
-              </a>
+            </a>
           </div>
-          <div class="naver"></div>
-          <div class="google"></div>
+
+          <div class="naverlogin">
+            <div id="naver_id_login"></div>
+          </div>
+
+          <div class="g-signin2" data-onsuccess="onSignIn">
+
+          </div>
+
         </fieldset>
       </form>
     </section>
@@ -128,31 +144,78 @@
   <script src="/js/toggle.js"></script>
 
   <!-- 카카오로그인 -->
-  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
   <script>
     //JavaScript 키 : 56d51771a4a9d45bce2747686afe4f96
     window.Kakao.init("3da40457bfdcc4665f55f88b67175d26"); // API Key 입력
 
     function kakaoLogin() {
-        // 함수 선언
-        window.Kakao.Auth.login({
-            // 카카오 연동 로그인을 위한 인증, 로그인 될 때 실행됨
-            scope: "profile_nickname, account_email", // 가져올 카카오 로그인 정보 중 동의항목 ID 설정
-            success: function (authobj) {
-                console.log(authobj); // 받아온 오브젝트 데이터를 콘솔로 출력해보기
-                window.Kakao.API.request({
-                    // 로그인 된 상태에서 유저의 로그인 정보(이메일, 닉네임 등) 값을 요청해서 받아오기
-                    url: "/v2/user/me", //로그인 한 사용자의 정보가 있는 url 지정
-                    success: (res) => {
-                        const kakao_account = res.kakao_account; // account 정보 가져오기
-                        console.log(kakao_account);
-                        location.href = 'index.html';  
-                    },
-                });
+      // 함수 선언
+      window.Kakao.Auth.login({
+        // 카카오 연동 로그인을 위한 인증, 로그인 될 때 실행됨
+        scope: "profile_nickname, account_email", // 가져올 카카오 로그인 정보 중 동의항목 ID 설정
+        success: function (authobj) {
+          console.log(authobj); // 받아온 오브젝트 데이터를 콘솔로 출력해보기
+          window.Kakao.API.request({
+            // 로그인 된 상태에서 유저의 로그인 정보(이메일, 닉네임 등) 값을 요청해서 받아오기
+            url: "/v2/user/me", //로그인 한 사용자의 정보가 있는 url 지정
+            success: (res) => {
+              const kakao_account = res.kakao_account; // account 정보 가져오기
+              console.log(kakao_account);
+              // location.href = 'index.html';
             },
-        });
+          });
+        },
+      });
     }
-</script>
+    //카카오로그아웃  
+    function kakaoLogout() {
+      if (Kakao.Auth.getAccessToken()) {
+        Kakao.API.request({
+          url: '/v1/user/unlink',
+          success: function (response) {
+            console.log(response)
+          },
+          fail: function (error) {
+            console.log(error)
+          },
+        })
+        Kakao.Auth.setAccessToken(undefined)
+      }
+    }
+
+  </script>
+  <!-- //네이버 로그인 버튼 노출 영역 -->
+
+  <script type="text/javascript">
+    var naver_id_login = new naver_id_login(
+      "gVWlX3_CO1_zi8qfIyTQ",
+      "https://elaborate-nasturtium-7ef512.netlify.app/naver_login/naver_callback.html",
+
+    );
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("green", 5, 65);
+    naver_id_login.setDomain("https://elaborate-nasturtium-7ef512.netlify.app/");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+    console.log(naver_id_login.getProfileData("name"));
+    console.log(naver_id_login.getProfileData("email"));
+    console.log(naver_id_login.getProfileData("nickname"));
+    console.log(naver_id_login.getProfileData("age"));
+  </script>
+
+  <!-- 구글 소셜 로그인 -->
+
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+  </script>
 </body>
 
 </html>
