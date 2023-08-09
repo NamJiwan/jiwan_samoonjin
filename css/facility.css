@@ -21,6 +21,7 @@ h1 {
 a {
   text-decoration: none;
   color: #f0f2f2;
+  
 }
 
 li {
@@ -68,7 +69,7 @@ h1 {
 .class_buttons::after {
   content: "";
   background-color: #252525;
-  width: 150%;
+  width: 142.5%;
   height: 100%;
   position: absolute;
   left: -30%;
@@ -200,8 +201,12 @@ p {
 
 .nomargin {
   
-  width: 40%;
-  height: 10%;
+  text-align: center;
+  margin: 10px;
+}
+.nomargin h2{
+  
+  font-size: 2rem;
 }
 
 .page h1 {
@@ -211,6 +216,7 @@ p {
 .rowbox {
   display: flex;
   justify-content: space-between;
+  padding: 30px 0 50px 0;
 }
 
 .rowbox > img {
@@ -221,16 +227,17 @@ button {
   background-color: #a68051;
   color: #f0f2f2;
   width: 280px;
-  height: 80px;
+  padding: 15px 20px;
   border-radius: 20px;
   border-style: none;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  
+  cursor: pointer;
 }
 
 .buttonbox {
   display: flex;
   justify-content: center;
+  padding: 50px 0  80px 0;
 }
 
 table {
@@ -299,7 +306,7 @@ table td {
 .noimg {
   width: 40%;
   margin-top: 20px;
-  margin-right: 20%;
+  
 }
 
 .picnictext1 {
@@ -362,13 +369,16 @@ h3 {
         position:static;
         background-color: #252525;
     } */
-
+    .class_buttons::after {
+      width: 135.6%;
+    }
   .contents {
     width: 90%;
   }
 
   .rowbox {
     flex-direction: column;
+    
   }
 
   .halfbox {
